@@ -5,7 +5,7 @@ namespace Service;
 interface DayInterface {
     public function parse(array $inputLines): void;
 
-    public function computePartOne(): int;
+    public function computePartOne(): mixed;
 
-    public function computePartTwo(): int;
+    public function computePartTwo(): mixed;
 }

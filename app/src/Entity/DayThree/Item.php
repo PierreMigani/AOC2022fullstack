@@ -10,17 +10,17 @@ class Item
         private int $quantity = 0
     ) {}
 
-    public function incQuantity()
+    public function incQuantity(): void
     {
         $this->quantity++;
     }
 
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
-    public function getPriority()
+    public function getPriority(): int
     {
         return $this->priority;
     }
