@@ -2,11 +2,14 @@
 
 <h1><?=$this->e($title)?></h1>
 
-<!-- form to submit problem input -->
 <?php if (isset($partOneResult) || isset($partTwoResult)): ?>
-    <p>Part One Result: <?=$this->e($partOneResult)?></p>
-    <p>Part Two Result: <?=$this->e($partTwoResult)?></p>
+    <!-- display results -->
+    <?php $this->insert($resultsTemplate, [
+        'partOneResult' => $partOneResult,
+        'partTwoResult' => $partTwoResult,
+    ]) ?>
 <?php else: ?>
+    <!-- form to submit problem input -->
     <textarea name="input" form="day-form" rows=20></textarea>
     <form
         id="day-form"

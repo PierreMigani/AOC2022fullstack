@@ -21,8 +21,6 @@ class ItemFactory {
             $priority -= 38;
         }
 
-        $item = new Item($type, $priority);
-
-        return $item;
+        return new Item($type, $priority);
     }
 }

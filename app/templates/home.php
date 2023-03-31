@@ -4,8 +4,7 @@
 
 <!-- list of links to day forms -->
 <div>
-    <a href="/day1">Day 1</a>
-    <a href="/day2">Day 2</a>
-    <a href="/day3">Day 3</a>
-    <a href="/day4">Day 4</a>
+    <?php for ($i = 1; $i <= $nbDays; $i++): ?>
+        <a href="/day<?=$i?>">Day <?=$i?></a>
+    <?php endfor; ?>
 </div>

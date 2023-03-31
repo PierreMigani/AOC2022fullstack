@@ -1,4 +1,6 @@
 {
     "window.zoomLevel": 2,
-    "editor.mouseWheelZoom": true
+    "editor.mouseWheelZoom": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
 }

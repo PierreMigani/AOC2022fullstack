@@ -6,15 +6,15 @@ abstract class AbstractMotionCommand
 {
     public function __construct(
         protected Rope $rope,
-        private int $steps
+        private int $nbSteps
     ) {}
 
     public function execute(): void
     {
-        $steps = $this->steps;
-        while ($steps > 0) {
+        $nbSteps = $this->nbSteps;
+        while ($nbSteps > 0) {
             $this->executeStep();
-            $steps--;
+            $nbSteps--;
         }
     }
 

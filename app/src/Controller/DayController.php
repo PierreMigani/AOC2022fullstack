@@ -16,6 +16,7 @@ class DayController extends BaseController {
         private StreamFactory $streamFactory,
         private Engine $templateEngine,
         private string $pageTitle,
+        private string $resultsTemplate = 'results::day',
     ) {
         parent::__construct($name);
     }
@@ -58,6 +59,7 @@ class DayController extends BaseController {
             'name' => $this->name,
             'partOneResult' => $partOneResult,
             'partTwoResult' => $partTwoResult,
+            'resultsTemplate' => $this->resultsTemplate,
         ]);
 
         $stream = $this->streamFactory->createStream($htmlContent);

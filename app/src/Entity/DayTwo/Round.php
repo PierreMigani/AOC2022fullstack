@@ -15,7 +15,7 @@ class Round {
 
     public function getYourPoints(): int
     {
-        $roundPoints = $this->yourMove->getPoints();
+        $movePoints = $this->yourMove->getPoints();
         switch($this->isWin()) {
             case 1:
                 $winningPoints = 6;
@@ -29,6 +29,6 @@ class Round {
                 break;
         }
 
-        return $roundPoints + $winningPoints;
+        return $movePoints + $winningPoints;
     }
 }

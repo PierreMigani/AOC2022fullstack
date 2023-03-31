@@ -21,7 +21,7 @@ class CrateMover9001 extends AbstractCrane {
 
         if ($fromCrateStack !== null && $toCrateStack !== null) {
             $this->extractCrates($fromStackName, $nbCrates);
-            $this->loadCrates($toStackName, $nbCrates);
+            $this->loadCrates($toStackName);
         }
     }
 }

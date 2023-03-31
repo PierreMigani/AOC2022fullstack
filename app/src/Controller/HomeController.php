@@ -22,6 +22,7 @@ class HomeController extends BaseController {
         
         $htmlContent = $this->templateEngine->render('home', [
             'title' => 'Home',
+            'nbDays' => 25,
         ]);
 
         $stream = $this->streamFactory->createStream($htmlContent);

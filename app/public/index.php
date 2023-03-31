@@ -11,6 +11,8 @@ function myAutoloader($className) {
 spl_autoload_register('myAutoloader');
 
 $templateEngine = new League\Plates\Engine(__DIR__ . '/../templates');
+$templateEngine->addFolder('results', __DIR__ . '/../templates/results');
+
 $streamFactory = new Factory\StreamFactory();
 $controllerFactory = new Factory\ControllerFactory($templateEngine, $streamFactory);
 $uriFactory = new Factory\UriFactory();
